@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omtanke</title>
+    <meta name="description"
+        content="Tjek et køb, før du køber. Tag quizzen, beregn pris pr. brug og lær om materialer.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images_02/logobb.png" alt="Logo" width="1000" height="131">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="garderobe.html">Garderobe</a></li>
+                <li><a href="inspiration.html">Inspiration</a></li>
+                <li><a href="omtanke.html" class="aktiv">Omtanke</a></li>
+            </ul>
+            <button class="burger" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- SKAL JEG KØBE DEN? -->
+        <section class="intro">
+            <p class="overskrift">TJEK FØR DU KØBER</p>
+            <h1>Skal jeg købe den?</h1>
+            <p>Et spørgsmål ad gangen, så får du et klart svar</p>
+        </section>
+
+        <section class="tjek">
+
+            <!-- spørgsmålet -->
+            <div id="sporgsmaal-del" class="quiz-felt">
+                <p>Spørgsmål <span id="nr">1</span> af 6</p>
+                <progress id="status" value="1" max="6"></progress>
+                <h2 id="sporgsmaal-tekst">Kan jeg style den på 3 måder?</h2>
+
+                <div class="svar-knapper grid_1-1-1">
+                    <button data-point="1">JA</button>
+                    <button data-point="0">NEJ</button>
+                    <button data-point="0.5">MÅSKE</button>
+                </div>
+            </div>
+
+            <!-- resultatet (skjult indtil quizzen er færdig) -->
+            <div id="resultat-del" class="quiz-felt" hidden>
+                <h2 id="resultat-titel"></h2>
+                <p id="resultat-tekst"></p>
+                <button id="proev-igen">PRØV IGEN</button>
+            </div>
+
+            <!-- produktet -->
+            <div class="produkt grid_1-1">
+                <p>Sort top</p>
+                <img src="./images_02/top4.png" alt="Sort top" width="400" height="600">
+            </div>
+
+        </section>
+
+
+        <!-- PRIS PR. BRUG -->
+        <section class="intro">
+            <p class="overskrift">PRIS PR. BRUG</p>
+            <h2>Hvad koster den egentlig pr. gang?</h2>
+            <p>Flyt sliderne, og se, om den er pengene værd</p>
+        </section>
+
+        <section class="pris">
+            <div class="sliders">
+                <label for="pris-slider">Pris: <output id="pris-output">350</output> kr</label>
+                <input type="range" id="pris-slider" min="0" max="2000" value="350">
+
+                <label for="brug-slider">Jeg bruger den: <output id="brug-output">20</output> gange</label>
+                <input type="range" id="brug-slider" min="1" max="100" value="20">
+            </div>
+
+            <div class="resultat">
+                <p class="tal"><span id="pris-pr-brug">18</span> kr</p>
+                <p>Pr. brug</p>
+                <p id="pris-vurdering">Godt køb - du får meget ud af den</p>
+            </div>
+        </section>
+
+
+        <!-- MATERIALER -->
+        <section class="intro">
+            <p class="overskrift">MATERIALER</p>
+            <h2>Materialer og deres påvirkning</h2>
+            <p>Se hvordan materialer påvirker dig og planeten</p>
+        </section>
+
+        <section class="materialer grid_1-1-1">
+            <a class="materiale" href="#">
+                <img src="./images_02/økologiskbomuld.webp" alt="Økologisk bomuld">
+                <div>
+                    <h3>Økologisk bomuld</h3>
+                    <p>Lavt vandforbrug</p>
+                    <span>LÆS MERE →</span>
+                </div>
+            </a>
+
+            <a class="materiale" href="#">
+                <img src="./images_02/hør.webp" alt="Hør">
+                <div>
+                    <h3>Hør</h3>
+                    <p>Holdbart og naturligt</p>
+                    <span>LÆS MERE →</span>
+                </div>
+            </a>
+
+            <a class="materiale" href="#">
+                <img src="./images_02/lyocell.webp" alt="Lyocell">
+                <div>
+                    <h3>Lyocell</h3>
+                    <p>Lavt kemikalieforbrug</p>
+                    <span>LÆS MERE →</span>
+                </div>
+            </a>
+        </section>
+
+
+        <!-- FORHANDLERE -->
+        <section class="intro">
+            <p class="overskrift">BÆREDYGTIGE FORHANDLERE</p>
+            <h2>Shop nyt med omtanke</h2>
+            <p>Udvalgte platforme</p>
+        </section>
+
+        <section class="forhandlere">
+            <a href="https://www.vinted.dk" target="_blank" rel="noopener">
+                <img src="./images_02/Vinted_Logo.png" alt="Vinted" width="1280" height="414">
+            </a>
+
+            <a href="https://www.sellpy.dk" target="_blank" rel="noopener">
+                <img src="./images_02/sellpy_log.png" alt="Sellpy" width="803" height="247">
+            </a>
+
+            <a href="https://reshoppit.dk" target="_blank" rel="noopener">
+                <img src="./images_02/reshoppit-logo.png" alt="Reshoppit" width="1819" height="390">
+            </a>
+        </section>
+
+        <section class="load-mere">
+            <button>LOAD FLERE BRANDS ↓</button>
+        </section>
+
+
+        <!-- TILBAGE -->
+        <section class="naeste grid_2-1">
+            <div>
+                <h3>Tilbage til garderoben</h3>
+                <p>Gem dit køb og brug det i nye outfits</p>
+            </div>
+
+            <div class="naeste-knap">
+                <a class="knap-hvid" href="garderobe.html">GARDEROBE</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a class="kontakt" href="#">KONTAKT</a>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">FACEBOOK</a>
+    </footer>
+
+    <script src="omtanke.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

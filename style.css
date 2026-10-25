@@ -1,0 +1,659 @@
+/*************** RESET *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/*************** GENERELT *********************/
+body {
+  background-color: #f4f2ee;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1,
+h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-size: 16px;
+}
+.overskrift {
+  font-size: 14px;
+  color: #5f6443;
+  margin-bottom: 4px;
+}
+
+/*************** MENU *********************/
+header {
+  padding: 25px;
+  background-color: #f2f0ea;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 130px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu a {
+  padding: 10px 16px;
+  color: #222;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover,
+.menu .aktiv {
+  background-color: #e6d8d0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+nav.active .menu {
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.active .menu a {
+  font-size: 24px;
+}
+.burger {
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  border: 0;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #333333;
+  transition: 0.2s linear;
+}
+
+/* krydsstregerne */
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*************** KNAPPER *********************/
+
+.knap-brun,
+.knap-hvid {
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.knap-brun {
+  background-color: #7d6352;
+  color: #ffffff;
+}
+
+.knap-hvid {
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* Tøjknapperne */
+.filter button {
+  padding: 8px 4px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Brun knap når den er valgt */
+.filter .valgt {
+  background-color: #7d6352;
+  color: #ffffff;
+}
+
+/*************** SLIDERS *********************/
+.slider label,
+.sliders label {
+  font-size: 14px;
+}
+
+/* selve stregen */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background: #222;
+  cursor: pointer;
+}
+
+/* den runde prik */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #222;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #222;
+  border: 0;
+}
+
+/*************** FÆLLES BOKSE *********************/
+
+.se-alle {
+  font-size: 11px;
+  color: #222;
+  text-decoration: none;
+}
+
+/* næsteboks */
+.naeste {
+  padding: 32px;
+  border-radius: 24px;
+  background-color: #6b6b5c;
+  color: #ffffff;
+}
+
+.naeste h2,
+.naeste h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.naeste p {
+  font-size: 14px;
+}
+
+.groen {
+  background-color: #c8cab0;
+  color: #222;
+}
+
+/*************** FORSIDE *********************/
+.toppen-tekst h1 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: black;
+  margin-block: 8px;
+}
+
+.toppen-tekst p {
+  font-size: 14px;
+  color: #5f6443;
+}
+
+.billeder img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* beregner-boksen */
+.beregner {
+  padding: 24px 16px;
+  border-radius: 24px;
+  background-color: #e6d8d0;
+}
+
+.beregner .tal {
+  font-size: 24px;
+  padding-left: 40px;
+}
+
+.beregner-tal p,
+.beregner-co2 p {
+  font-size: 10px;
+  padding-left: 40px;
+}
+
+/* streg mellem de to tal */
+.beregner-co2 {
+  padding-left: 5px;
+  border-left: 1px solid #222;
+}
+
+/* sådan virker det */
+.trin h3 {
+  font-family: Georgia, serif;
+  margin-bottom: 4px;
+}
+
+.trin p {
+  font-family: Georgia, serif;
+  font-size: 14px;
+}
+
+/* den brune cirkel*/
+.trin-nummer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #7d6352;
+  color: #ffffff;
+}
+
+.trin a {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #222;
+  text-decoration: none;
+}
+
+/* guides */
+.guides-grid img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.guides-grid p {
+  font-size: 12px;
+}
+
+/*************** GARDEROBE *********************/
+
+/* lyserøde knapper */
+.metoder button {
+  padding: 20px;
+  border: 0;
+  border-radius: 16px;
+  background-color: #e6d8d0;
+  text-align: center;
+}
+
+.metoder strong {
+  font-size: 14px;
+}
+
+.metoder span {
+  font-family: Georgia, serif;
+  font-size: 12px;
+}
+/* gemte outfits */
+.gemt {
+  padding: 12px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.ny-her {
+  padding: 12px 16px;
+  border-radius: 10px;
+  background-color: #c8cab0;
+}
+
+.ny-her p {
+  font-size: 12px;
+}
+
+.soeg input,
+.soeg button {
+  padding: 8px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+
+/* hvid felter*/
+.toej-grid img,
+.tom,
+.outfit-toej img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain; /* hele tøjet kan ses */
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* brunbue */
+.avatar {
+  aspect-ratio: 2 / 3; /* høj og smal */
+  padding-top: 24px;
+  border-radius: 200px 200px 0 0; /* kun de øverste hjørner er runde */
+  background-color: #7d6352;
+  overflow: hidden;
+}
+
+.avatar img {
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* ubrugt tøj */
+.ubrugt {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #c8cab0;
+}
+
+.ubrugt h3 {
+  font-size: 18px;
+}
+
+/*************** INSPIRATION *********************/
+
+/* stilarter */
+.stil img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.stil p {
+  padding: 8px;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.stil strong {
+  font-size: 13px;
+}
+
+/* anledning */
+.anledning {
+  padding: 20px;
+  border-radius: 24px;
+  background-color: #e6d8d0;
+}
+
+.anledninger button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 20px;
+  background-color: #7d6352;
+  color: #ffffff;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.look-billeder img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.look-info p {
+  font-size: 12px;
+}
+
+/* stilguides */
+.guide {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.guide img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* tekstboks ovenpå billede */
+.guide div {
+  padding: 12px;
+  background-color: rgba(122, 122, 106, 0.7);
+}
+
+.guide h3 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.guide p {
+  font-size: 11px;
+}
+
+.guide span {
+  font-size: 10px;
+}
+
+/*************** OMTANKE *********************/
+
+/* quiz */
+.tjek {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.quiz-felt {
+  padding: 24px;
+  background-color: #c8cab0;
+}
+
+.quiz-felt h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-block: 24px 16px;
+}
+
+.tjek button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border: 0;
+  background-color: #222;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #222;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ffffff;
+}
+
+progress::-moz-progress-bar {
+  background-color: #ffffff;
+}
+.produkt {
+  padding: 24px;
+  background-color: #e6d8d0;
+}
+
+.produkt p {
+  font-size: 18px;
+}
+
+/* pris pr. brug */
+.pris {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #c8cab0;
+}
+
+.resultat .tal {
+  font-size: 40px;
+}
+
+/* materialer */
+.materiale {
+  color: #222;
+  text-decoration: none;
+}
+
+.materiale img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* tekstboks ovenpå billede */
+.materiale div {
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.materiale h3 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.materiale p,
+.materiale span {
+  font-size: 11px;
+}
+
+/* forhandlere */
+.forhandlere a {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #e6d8d0;
+}
+
+.load-mere button {
+  padding: 8px 12px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+/*************** FOOTER *********************/
+footer {
+  padding: 24px;
+  background-color: #4a4a36;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px;
+}
+
+/*************** DESKTOP (800px og bredere) *********************/
+
+@media (width >= 800px) {
+  h1,
+  h2 {
+    font-size: 28px;
+  }
+
+  .naeste {
+    padding: 40px 56px;
+  }
+
+  .toppen-tekst h1 {
+    font-size: 48px;
+  }
+
+  .beregner {
+    padding: 32px 40px;
+  }
+
+  .beregner .tal {
+    font-size: 40px;
+  }
+
+  .beregner-tal p,
+  .beregner-co2 p {
+    font-size: 12px;
+  }
+
+  /* streg over hvert trin */
+  .trin {
+    padding-top: 12px;
+    border-top: 2px solid #222;
+  }
+
+  .ubrugt {
+    padding: 32px 40px;
+  }
+
+  .anledning {
+    padding: 24px;
+  }
+
+  .guide h3,
+  .materiale h3 {
+    font-size: 16px;
+  }
+
+  .quiz-felt,
+  .produkt {
+    padding: 40px;
+  }
+
+  .pris {
+    padding: 32px 40px;
+  }
+
+  footer {
+    padding: 24px 40px;
+  }
+}
+
+/*************** HOVER *********************/
+
+main button,
+main a {
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+main button:hover,
+main a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.se-alle:hover,
+.trin a:hover {
+  transform: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

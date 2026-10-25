@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buybetter</title>
+    <meta name="description"
+        content="Buy Better hjælper dig med at bruge det tøj, du allerede har, og købe mere bevidst.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images_02/logobb.png" alt="Logo" width="1000" height="80">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="aktiv">Forside</a></li>
+                <li><a href="garderobe.html">Garderobe</a></li>
+                <li><a href="inspiration.html">Inspiration</a></li>
+                <li><a href="omtanke.html">Omtanke</a></li>
+            </ul>
+            <button class="burger" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ØVERST -->
+        <section class="toppen">
+            <div class="toppen-tekst">
+                <p class="overskrift">BRUG MERE, KØB MINDRE.</p>
+                <h1>BRUG DET<br>DU ALLEREDE HAR</h1>
+                <p>Saml din garderobe ét sted, find nye outfits i det du ejer,
+                    og få værktøjer til at træffe mere bevidste valg.</p>
+            </div>
+
+            <div class="billeder grid_2-8-1-5-2">
+                <img class="billede-stort" src="./images_02/forside1-2.webp" alt="Kvinde i blazer" fetchpriority="high">
+                <img class="billede-lille" src="./images_02/forside2.webp" alt="Tøj på bøjlestang">
+            </div>
+
+            <div class="toppen-knapper grid_1-1">
+                <a class="knap-brun" href="garderobe.html">Byg din garderobe</a>
+                <a class="knap-hvid" href="#saadan-virker-det">Se hvordan det virker</a>
+            </div>
+        </section>
+
+
+        <!-- PRØV SELV SLIDEREN -->
+        <section class="proev-selv">
+            <p class="overskrift">PRØV SELV</p>
+            <h2>Hvor meget af dit tøj bruger du egentlig?</h2>
+            <p>Flyt slideren og se hvor meget der ligger ubrugt</p>
+
+            <div class="beregner">
+                <div class="slider">
+                    <label for="antal-toej">Jeg har <output id="antal-output">80</output> stykker tøj</label>
+                    <input type="range" id="antal-toej" name="antal-toej" min="0" max="150" value="80">
+                </div>
+
+                <div class="beregner-tal">
+                    <p class="tal" id="ubrugt">25</p>
+                    <p>Ting bruges aldrig</p>
+                </div>
+
+                <div class="beregner-co2">
+                    <p class="tal"><span id="co2">55</span> kg</p>
+                    <p>CO2 kan du spare ved at bruge dem</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3 TRIN I SÅDAN VIRKER DET -->
+        <section class="saadan" id="saadan-virker-det">
+            <p class="overskrift">SÅDAN VIRKER DET</p>
+            <h2>Tre trin til en garderobe, du bruger</h2>
+
+            <div class="trin-liste grid_1-1">
+
+                <div class="trin">
+                    <div class="trin-nummer">1</div>
+                    <div>
+                        <h3>Byg din garderobe</h3>
+                        <p>Tilføj dit tøj og få overblik over hvad du ejer.</p>
+                        <a href="garderobe.html">GÅ TIL GARDEROBEN →</a>
+                    </div>
+                </div>
+
+                <div class="trin">
+                    <div class="trin-nummer">2</div>
+                    <div>
+                        <h3>Inspiration</h3>
+                        <p>Få inspiration til outfits du allerede har.</p>
+                        <a href="inspiration.html">GÅ TIL INSPIRATION →</a>
+                    </div>
+                </div>
+
+                <div class="trin">
+                    <div class="trin-nummer">3</div>
+                    <div>
+                        <h3>Køb med omtanke</h3>
+                        <p>Tjek om du virkelig har brug for det.</p>
+                        <a href="omtanke.html">GÅ TIL KØB MED OMTANKE →</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- START MED 5 TING -->
+        <section class="naeste groen grid_2-1">
+            <div>
+                <h2>Start med 5 ting.</h2>
+                <p>Det tager under et minut at tilføje dit første tøj.</p>
+            </div>
+
+            <div class="naeste-knap">
+                <a class="knap-brun" href="garderobe.html">Byg din garderobe</a>
+            </div>
+        </section>
+
+
+        <!-- GUIDES -->
+        <section class="guides">
+            <p class="overskrift">LÆS MERE</p>
+            <h2>Nyeste guides</h2>
+
+            <div class="guides-grid grid_1-1">
+                <div>
+                    <img src="./images_02/forside3.webp" alt="Foldet tøj">
+                    <p>5 måder at stoppe med at impulskøbe</p>
+                </div>
+
+                <div>
+                    <img src="./images_02/forside4.webp" alt="Blomster">
+                    <p>Hvordan finder du din personlige stil</p>
+                </div>
+
+                <div>
+                    <img src="./images_02/forside5.webp" alt="Grøn drik">
+                    <p>10 wardrobe essentials</p>
+                </div>
+
+                <div>
+                    <img src="./images_02/forside6.jpg" alt="Tøj på bøjlestang">
+                    <p>Hvordan styler man trends </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a class="kontakt" href="#">KONTAKT</a>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">FACEBOOK</a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

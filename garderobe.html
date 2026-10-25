@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>garderobe</title>
+    <meta name="description"
+        content="Saml din garderobe ét sted, få overblik over dit tøj og byg nye outfits med det, du allerede ejer.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images_02/logobb.png" alt="Logo" width="1000" height="131">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="garderobe.html" class="aktiv">Garderobe</a></li>
+                <li><a href="inspiration.html">Inspiration</a></li>
+                <li><a href="omtanke.html">Omtanke</a></li>
+            </ul>
+            <button class="burger" aria-label="Åbn menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- TRIN 1 -->
+        <section class="intro">
+            <p class="overskrift">TRIN 1</p>
+            <h1>Tilføj dit tøj</h1>
+            <p>Vælg den metode der er nemmest for dig</p>
+        </section>
+
+        <section class="metoder grid_1-1">
+            <button>
+                <strong>Tag billeder</strong>
+                <span>Tilføj flere items på en gang</span>
+            </button>
+
+            <button>
+                <strong>Importer køb</strong>
+                <span>Importer online køb </span>
+            </button>
+
+            <button>
+                <strong>Tilføj manuelt</strong>
+                <span>Et stykke tøj ad gangen</span>
+            </button>
+
+            <button>
+                <strong>Upload fra galleri</strong>
+                <span>Find dine items i dit bibliotek</span>
+            </button>
+        </section>
+
+        <!-- kun desktop -->
+        <section class="ny-her kun-desktop">
+            <p><strong>Ny her?</strong></p>
+            <p>Start med dine 5 mest brugte items og byg videre fra der. Du behøver ikke at tilføje det hele til at
+                starte med</p>
+        </section>
+
+
+        <!-- TRIN 2 -->
+        <section class="intro">
+            <p class="overskrift">TRIN 2</p>
+            <h2>Din garderobe</h2>
+            <p>82 ting i alt</p>
+        </section>
+
+        <!-- kun desktop: søg og sortér -->
+        <section class="soeg kun-desktop">
+            <input type="search" placeholder="Søg i dit tøj..." aria-label="Søg i dit tøj">
+            <button>Mest brugte</button>
+        </section>
+
+        <!-- KATEGORIER -->
+        <section class="filter kategorier grid_1-1-1-1-1">
+            <button class="valgt">ALLE</button>
+            <button>TOPPE</button>
+            <button>BUKSER</button>
+            <button>KJOLER</button>
+            <button>JAKKER</button>
+            <button class="kun-desktop">SKO</button>
+            <button class="kun-desktop">TASKER</button>
+            <button class="kun-desktop">ACCESSORIES</button>
+        </section>
+
+        <!-- GARDEROBE -->
+        <section class="toej-grid grid_1-1-1">
+            <img src="./images_02/jakke1.png" alt="Jakke" fetchpriority="high">
+            <img src="./images_02/skjorte 2.png" alt="Skjorte">
+            <img src="./images_02/taske3.png" alt="Taske">
+            <img src="./images_02/thsirt7.png" alt="T-shirt">
+            <img src="./images_02/trøje5.png" alt="Trøje">
+            <img src="./images_02/top4.png" alt="Top">
+            <div class="tom"></div>
+            <div class="tom"></div>
+            <div class="tom"></div>
+        </section>
+
+        <!-- kun desktop -->
+        <a class="se-alle kun-desktop" href="#">SE ALLE →</a>
+
+
+        <!-- TRIN 3 -->
+        <section class="intro">
+            <p class="overskrift">TRIN 3</p>
+            <h2>Byg dit outfit</h2>
+            <p>Vælg ting fra din garderobe og se det på din avatar</p>
+        </section>
+
+        <section class="outfit">
+
+            <!-- KATEGORIER -->
+            <div class="filter outfit-filter grid_1-1-1-1-1">
+                <button class="kun-mobil valgt">ALLE</button>
+                <button>TOPPE</button>
+                <button>BUKSER</button>
+                <button>KJOLER</button>
+                <button>JAKKER</button>
+                <button class="kun-desktop">SKO</button>
+                <button class="kun-desktop">TASKER</button>
+                <button class="kun-desktop">ACCESSORIES</button>
+                <button class="kun-desktop">ANDET</button>
+            </div>
+
+            <!-- AVATAR -->
+            <div class="avatar">
+                <img src="./images_02/avatarrigtgi .png" alt="Avatar">
+            </div>
+
+            <!-- TØJ TIL OUTFIT -->
+            <div class="outfit-toej grid_1-1-1-1">
+                <img src="./images_02/jakke1.png" alt="Jakke">
+                <img src="./images_02/skjorte 2.png" alt="Skjorte">
+                <img src="./images_02/taske3.png" alt="Taske">
+                <img src="./images_02/top4.png" alt="Top">
+            </div>
+
+            <!-- GEM / RESET -->
+            <div class="outfit-knapper grid_1-1">
+                <button class="knap-brun">GEM OUTFIT</button>
+                <button class="knap-hvid">RESET</button>
+            </div>
+
+        </section>
+
+
+        <!--GEMTE OUTFITS -->
+        <section class="gemte">
+            <p class="overskrift">DINE OUTFITS</p>
+            <h2>Gemte outfits</h2>
+            <p>Outfits du har sammensat med dit eget tøj</p>
+
+            <div class="gemte-grid grid_1-1-1">
+                <article class="gemt">
+                    <img src="./images_02/outfit-cardigan.webp" alt="Avatar i grå cardigan og jeans">
+                    <p>Hverdag</p>
+                </article>
+                <article class="gemt">
+                    <img src="./images_02/outfit-blazer.webp" alt="Avatar i sort blazer og jeans">
+                    <p>Arbejde</p>
+                </article>
+                <article class="gemt">
+                    <img src="./images_02/outfit-sort-top.webp" alt="Avatar i sort top og jeans">
+                    <p>Brunch</p>
+                </article>
+                <article class="gemt kun-desktop">
+                    <img src="./images_02/outfit-blonde.webp" alt="Avatar i blonder">
+                    <p>Date night</p>
+                </article>
+                <article class="gemt kun-desktop">
+                    <img src="./images_02/outfit-sweater.webp" alt="Avatar i sweater">
+                    <p>Street</p>
+                </article>
+            </div>
+        </section>
+
+
+
+
+        <!-- UBRUGT TØJ -->
+        <section class="ubrugt">
+            <h3>7 items er ikke brugt i over 6 måneder</h3>
+
+            <div class="ubrugt-knapper grid_1-1-1">
+                <a class="knap-hvid" href="https://www.vinted.dk" target="_blank" rel="noopener">Vinted</a>
+                <a class="knap-hvid" href="https://www.sellpy.dk" target="_blank" rel="noopener">Sellpy</a>
+                <a class="knap-hvid" href="https://reshopper.dk" target="_blank" rel="noopener">ReShopper</a>
+            </div>
+        </section>
+
+
+        <!-- NÆSTE -->
+        <section class="naeste grid_2-1">
+            <div>
+                <h3>Næste: Inspiration</h3>
+                <p>Få inspiration til at bruge dit tøj på nye måder</p>
+            </div>
+
+            <div class="naeste-knap">
+                <a class="knap-hvid" href="inspiration.html">GÅ TIL STIL</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a class="kontakt" href="#">KONTAKT</a>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">FACEBOOK</a>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

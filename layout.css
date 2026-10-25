@@ -1,0 +1,702 @@
+/*************** GENERELT *********************/
+
+/* elementer med hidden er altid skjult ( quizzen) */
+[hidden] {
+  display: none !important;
+}
+
+/* siden: alt står under hinanden med 16px imellem */
+main {
+  display: grid;
+  gap: 16px;
+  max-width: 1000px;
+  margin-inline: auto; /* centrerer siden */
+  padding: 0 24px 50px;
+}
+
+/* en ny gruppe får ekstra luft: 16px (gap) + 34px = 50px */
+.intro,
+.toppen,
+.proev-selv,
+.saadan,
+.guides,
+.gemte,
+.ubrugt,
+.naeste {
+  margin-top: 34px;
+}
+
+/* skjul desktop-ting på mobil */
+@media (width < 800px) {
+  .kun-desktop {
+    display: none !important;
+  }
+}
+
+/*************** GRIDS FRA MINE WIREFRAMES *********************/
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid_2-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid_1-1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid_2-8-1-5-2 {
+  display: grid;
+  grid-template-columns: 2fr 8fr 1fr 5fr 2fr;
+}
+
+/*************** HEADER OG MENU *********************/
+
+/* logo til venstre, burger til højre, hænger fast i toppen */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* menuen er skjult på mobil */
+.menu {
+  display: none;
+}
+
+/* burgeren: de tre streger under hinanden */
+.burger {
+  display: grid;
+}
+
+/* når burgeren er trykket, folder menuen ud under headeren */
+nav.active .menu {
+  display: grid;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+nav.active .menu li {
+  margin: 10px 20px;
+}
+
+/*************** FÆLLES *********************/
+
+/* sliders: teksten over slideren */
+.slider,
+.sliders {
+  display: grid;
+}
+
+.slider label,
+.sliders label {
+  margin: 16px 0 10px;
+}
+
+/* SE ALLE til højre */
+.se-alle {
+  justify-self: end;
+}
+
+/* næste-boksen (grid_2-1): på mobil står tekst og knap under hinanden */
+.naeste {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.naeste-knap {
+  display: grid;
+  justify-content: start;
+}
+
+/*************** FORSIDE *********************/
+
+/* toppen: tekst, billeder og knapper under hinanden */
+.toppen {
+  display: grid;
+  gap: 24px;
+}
+
+.toppen-tekst p {
+  max-width: 340px;
+}
+
+/* De to billeder overlapper i kolonne 3 */
+.billeder {
+  align-items: center;
+  max-width: 420px;
+}
+
+.billede-stort {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.billede-lille {
+  grid-column: 3 / 5;
+  grid-row: 1;
+}
+
+/* de to knapper (grid_1-1): kun så brede som teksten, i midten */
+.toppen-knapper {
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* beregner: slider og to tal ved siden af hinanden */
+.beregner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* sådan virker det (grid_1-1): på mobil står trinene under hinanden */
+.trin-liste {
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* cirkel til venstre, tekst til højre */
+.trin {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* tallet i midten af cirklen */
+.trin-nummer {
+  display: grid;
+  place-items: center;
+}
+
+/* linkene vises kun på desktop */
+.trin a {
+  display: none;
+}
+
+/* guides (grid_1-1): to på række */
+.guides-grid {
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/*************** GARDEROBE *********************/
+
+/* gemte outfits */
+.gemte {
+  display: grid;
+  gap: 4px;
+}
+
+.gemte-grid {
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.gemt {
+  display: grid;
+  gap: 8px;
+}
+
+/* trin 1 (grid_1-1): fire knapper, 2 x 2 */
+.metoder {
+  gap: 12px;
+}
+
+/* overskrift og tekst under hinanden inde i knappen */
+.metoder button {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+}
+
+/* ny her: lille tekst til venstre, lang tekst til højre */
+.ny-her {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+/* søgefelt og knap til højre */
+.soeg {
+  display: grid;
+  grid-template-columns: 220px auto;
+  justify-content: end;
+  gap: 8px;
+}
+
+/* kategorier (grid_1-1-1-1-1): fem på række */
+.kategorier {
+  gap: 8px;
+}
+
+/* tøjet (grid_1-1-1): tre på række */
+.toej-grid {
+  gap: 8px;
+}
+
+/* byg dit outfit: alt under hinanden */
+.outfit {
+  display: grid;
+  gap: 24px;
+}
+
+/* kategorier i outfit (grid_1-1-1-1-1): fem på række */
+.outfit-filter {
+  gap: 8px;
+}
+
+/* avataren: højst 240px bred og i midten */
+.avatar {
+  width: 100%;
+  max-width: 240px;
+  justify-self: center;
+}
+
+/* tøjet til outfittet (grid_1-1-1-1): fire på række */
+.outfit-toej {
+  gap: 8px;
+}
+
+/* GEM OUTFIT og RESET (grid_1-1): kun så brede som teksten, i midten */
+.outfit-knapper {
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ubrugt tøj: overskrift over knapperne */
+.ubrugt {
+  display: grid;
+  gap: 16px;
+}
+
+/* de tre knapper (grid_1-1-1): kun så brede som teksten */
+.ubrugt-knapper {
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+  gap: 8px;
+}
+
+/*************** INSPIRATION *********************/
+
+/* stil-filter (grid_1-1-1-1): fire på række */
+.stil-filter {
+  gap: 8px;
+}
+
+/* stilarter (grid_1-1-1): tre på række */
+.stilarter {
+  gap: 6px;
+}
+
+/* billede og tekst i samme celle, så teksten ligger ovenpå */
+.stil {
+  display: grid;
+}
+
+.stil img,
+.stil p {
+  grid-area: 1 / 1;
+}
+
+/* teksten nederst, navn og beskrivelse under hinanden */
+.stil p {
+  display: grid;
+  align-self: end;
+}
+
+/* anledning (grid_1-2): knapperne kun så brede som teksten, billederne resten */
+.anledning {
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+}
+
+/* knapperne under hinanden */
+.anledninger {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+/* to billeder på række (grid_1-1) */
+.look-billeder {
+  gap: 6px;
+}
+
+/* GEM LOOK til højre */
+.look-info {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: end;
+  align-items: center;
+  margin-top: 12px;
+}
+
+/* stilguides (grid_1-1): to på række */
+.stilguides {
+  gap: 12px;
+}
+
+/* billede og tekst i samme celle, så teksten ligger ovenpå */
+.guide {
+  display: grid;
+}
+
+.guide img,
+.guide div {
+  grid-area: 1 / 1;
+}
+
+.guide img {
+  aspect-ratio: 3 / 3;
+  object-fit: cover;
+}
+
+/* teksten nederst */
+.guide div {
+  display: grid;
+  align-self: end;
+}
+
+.guide span {
+  margin-top: 8px;
+}
+
+/*************** OMTANKE *********************/
+
+/* quiz og produkt under hinanden, uden mellemrum */
+.tjek {
+  display: grid;
+}
+
+/* indholdet i quizzen under hinanden */
+.quiz-felt {
+  display: grid;
+}
+
+#proev-igen {
+  justify-self: start;
+}
+
+/* JA, NEJ, MÅSKE (grid_1-1-1) ved siden af hinanden */
+.svar-knapper {
+  gap: 12px;
+}
+
+progress {
+  margin-top: 8px;
+}
+
+/* produktet (grid_1-1): tekst til venstre, billede til højre */
+.produkt {
+  gap: 16px;
+  align-items: center;
+}
+
+.produkt img {
+  max-width: 200px;
+  justify-self: end; /* billedet ud til højre */
+}
+
+/* pris pr. brug: sliders over resultatet */
+.pris {
+  display: grid;
+  gap: 24px;
+}
+
+/* materialer (grid_1-1-1): tre på række */
+.materialer {
+  gap: 4px;
+}
+
+/* billede og tekst i samme celle, så teksten ligger ovenpå */
+.materiale {
+  display: grid;
+}
+
+.materiale img,
+.materiale div {
+  grid-area: 1 / 1;
+}
+
+/* teksten nederst */
+.materiale div {
+  display: grid;
+  align-self: end;
+}
+
+.materiale span {
+  margin-top: 12px;
+}
+
+/* forhandlere: under hinanden, smalle og i midten */
+.forhandlere {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 280px;
+  justify-self: center;
+}
+
+/* logoet i midten af boksen */
+.forhandlere a {
+  display: grid;
+  place-items: center;
+}
+
+.forhandlere img {
+  max-width: 150px;
+}
+
+/* LOAD FLERE BRANDS i midten */
+.load-mere {
+  display: grid;
+  justify-content: center;
+}
+
+/*************** FOOTER *********************/
+
+/* linkene under hinanden */
+footer {
+  display: grid;
+  gap: 4px;
+}
+
+/*************** DESKTOP (800px og bredere) *********************/
+@media (width >= 800px) {
+  /* skjul mobil-ting */
+  .kun-mobil {
+    display: none !important;
+  }
+
+  /* --- MENU --- */
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  /* --- NÆSTE-BOKSEN: tekst til venstre, knap til højre (2fr 1fr) --- */
+  .naeste {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+
+  .naeste-knap {
+    justify-content: end;
+  }
+
+  /* --- FORSIDE --- */
+
+  /* tekst og knapper til venstre, billeder til højre */
+  .toppen {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "tekst billeder"
+      "knapper billeder";
+    column-gap: 40px;
+    align-items: center;
+  }
+
+  .toppen-tekst {
+    grid-area: tekst;
+    align-self: end;
+  }
+
+  .billeder {
+    grid-area: billeder;
+  }
+
+  .toppen-knapper {
+    grid-area: knapper;
+    align-self: start;
+    justify-content: start;
+  }
+
+  .beregner {
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  /* tre trin ved siden af hinanden */
+  .trin-liste {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trin {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 8px;
+  }
+
+  .trin-nummer {
+    display: none;
+  }
+
+  .trin a {
+    display: block;
+  }
+
+  .guides-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* --- GARDEROBE --- */
+
+  .metoder {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .kategorier {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .gemte-grid {
+    grid-template-columns: repeat(5, 200px);
+  }
+
+  /* alt tøj på */
+  .toej-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .tom {
+    display: none;
+  }
+
+  /* tøjet bestemmer højden, resten følger med */
+  .outfit {
+    grid-template-columns: 150px 380px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "kat toej knapper"
+      "kat toej avatar";
+  }
+
+  /* kategorierne fordelt fra top til bund */
+  .outfit-filter {
+    grid-area: kat;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+  }
+
+  .outfit-toej {
+    grid-area: toej;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* knapperne øverst, lige så brede som avataren */
+  .outfit-knapper {
+    grid-area: knapper;
+    grid-template-columns: 1fr 1fr;
+    width: 260px;
+    justify-self: end;
+  }
+
+  /* avataren fylder resten ned til bunden af tøjet */
+  .avatar {
+    grid-area: avatar;
+    width: 260px;
+    max-width: none;
+    aspect-ratio: auto;
+    height: 0;
+    min-height: 100%;
+    justify-self: end;
+  }
+
+  /* overskrift til venstre, knapper til højre */
+  .ubrugt {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  /* --- INSPIRATION --- */
+
+  .intro {
+    margin-bottom: 0px;
+  }
+  .stil-filter {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .stilarter {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .anledning {
+    gap: 24px;
+  }
+
+  .look-billeder {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Date night til venstre, GEM LOOK til højre */
+  .look-info {
+    grid-template-columns: 1fr auto;
+    justify-content: stretch;
+  }
+
+  .stilguides {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* --- OMTANKE --- */
+
+  /* quizzen dobbelt så bred som produktet */
+  .tjek {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* sliders til venstre, resultat til højre */
+  .pris {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+
+  /* tre logoer på række */
+  .forhandlere {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: none;
+  }
+
+  /* --- FOOTER: KONTAKT til venstre, resten til højre --- */
+  footer {
+    grid-template-columns: 1fr auto auto;
+    gap: 24px;
+  }
+}
